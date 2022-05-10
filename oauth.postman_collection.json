@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "d4790056-4e9b-4e68-87e7-a6a33e391c42",
+		"name": "oauth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "flipkart",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "suvu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Suvu@1994",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/account/ph4543/balance?access_token=9e7a45fe-bbc0-483f-be29-e77e91bae464",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"account",
+						"ph4543",
+						"balance"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "9e7a45fe-bbc0-483f-be29-e77e91bae464"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
